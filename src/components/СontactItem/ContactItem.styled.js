@@ -1,29 +1,12 @@
 import styled from '@emotion/styled';
-import { FaTrash } from 'react-icons/fa';
-import { theme } from 'styles/theme';
-
-export const Avatar = styled.div`
-  position: relative;
-  width: 40px;
-  height: 40px;
-  background-color: ${props => props.bgColor};
-  border-radius: 50px;
-  color: ${props => props.color};
-`;
-
-export const Character = styled.span`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
 
 export const Item = styled.li`
   list-style: none;
-  display: grid;
-  grid-template-columns: 60px 1fr 1fr 30px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  padding: 10px 0;
+  padding: 25px 0;
+  gap: 20px;
 `;
 
 export const Name = styled.p``;
@@ -40,12 +23,3 @@ export const DeleteButton = styled.button`
   cursor: pointer;
 `;
 
-export const DeleteIcon = styled(FaTrash)`
-  font-size: 1rem;
-  color: gray;
-  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  &:hover {
-    color: ${theme.palette.secondary.light};
-  }
-`;

@@ -1,18 +1,15 @@
-import { TextField } from '@mui/material';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Filter = ({ onSearchContact }) => {
   return (
-    <TextField
+    <input
       id="outlined-search"
-      label="Search"
-      color="secondary"
-      type="search"
-      size="small"
       onChange={onSearchContact}
-      style={{ marginBottom: '20px' }}
+      style={{
+        height: '35px',
+        marginBottom: '20px'
+      }}
     />
   );
 };

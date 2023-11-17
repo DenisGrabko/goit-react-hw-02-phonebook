@@ -1,24 +1,18 @@
 import PropTypes from 'prop-types';
 import {
   DeleteButton,
-  DeleteIcon,
-  Avatar,
-  Character,
   Item,
   Name,
   Number,
 } from './ContactItem.styled';
 
-const ContactItem = ({ id, name, number, color, bgColor, onDeleteContact }) => {
+const ContactItem = ({ id, name, number, onDeleteContact }) => {
   return (
-    <Item>
-      <Avatar color={color} bgColor={bgColor}>
-        <Character>{name[0].toUpperCase()}</Character>
-      </Avatar>
+    <Item>     
       <Name>{name}</Name>
       <Number>{number}</Number>
       <DeleteButton onClick={() => onDeleteContact(id)}>
-        <DeleteIcon />
+        Delete
       </DeleteButton>
     </Item>
   );
